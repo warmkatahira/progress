@@ -498,6 +498,8 @@ video {
   grid-column: span 7 / span 7;
 }.col-span-6 {
   grid-column: span 6 / span 6;
+}.col-span-10 {
+  grid-column: span 10 / span 10;
 }.col-start-3 {
   grid-column-start: 3;
 }.col-start-11 {
@@ -506,6 +508,8 @@ video {
   grid-column-start: 1;
 }.col-start-4 {
   grid-column-start: 4;
+}.col-start-2 {
+  grid-column-start: 2;
 }.mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1099,6 +1103,11 @@ video {
 }@media (min-width: 1024px) {.lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}@media (min-width: 1280px) {.xl\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }.xl\:col-start-4 {
+    grid-column-start: 4;
   }
 }
 
