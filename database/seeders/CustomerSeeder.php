@@ -18,22 +18,22 @@ class CustomerSeeder extends Seeder
         Customer::create([
             'customer_code' => 'intervia',
             'customer_name' => 'intervia',
-            'base_name' => '第1営業所',
+            'base_id' => 1,
         ]);
         Customer::create([
             'customer_code' => 'ueni',
             'customer_name' => 'ウエニ貿易',
-            'base_name' => 'ロジコンタクト',
+            'base_id' => 7,
         ]);
         Customer::create([
             'customer_code' => '2flag',
             'customer_name' => '2FLAG',
-            'base_name' => 'ロジステーションプラス',
+            'base_id' => 8,
         ]);
         Customer::create([
             'customer_code' => 'from',
             'customer_name' => 'フロムアイズ',
-            'base_name' => 'ロジコンタクト',
+            'base_id' => 7,
         ]);
     }
 }
