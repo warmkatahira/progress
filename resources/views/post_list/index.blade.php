@@ -5,7 +5,7 @@
         </div>
         <div class="grid grid-cols-12 gap-4 mt-5">
             @foreach($posts as $post)
-                <div class="col-span-6 xl:col-span-4 grid grid-cols-12">
+                <div class="col-span-12 xl:col-span-4 grid grid-cols-12">
                     <p class="col-span-12 text-right pr-5 text-sm">{{ '最終更新時間:'.\Carbon\Carbon::parse($post->updated_at)->isoFormat('YYYY年MM月DD日(ddd) HH時mm分ss秒') }}</p>
                     <p class="col-span-12 bg-black text-white text-center rounded-t-lg py-3">{{ $post->customer->customer_name }}</p>
                     <p class="col-span-5 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_1_label) ? '-' : $post->info_1_label }}</p>
