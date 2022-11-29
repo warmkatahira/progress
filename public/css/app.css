@@ -502,8 +502,6 @@ video {
   grid-column-start: 3;
 }.col-start-9 {
   grid-column-start: 9;
-}.col-start-1 {
-  grid-column-start: 1;
 }.col-start-2 {
   grid-column-start: 2;
 }.mx-auto {
@@ -799,6 +797,9 @@ video {
 }.text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }.text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -808,9 +809,6 @@ video {
 }.text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }.font-medium {
   font-weight: 500;
 }.font-semibold {
