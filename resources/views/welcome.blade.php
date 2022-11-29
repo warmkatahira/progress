@@ -30,9 +30,9 @@
             @if (Route::has('login'))
                 <div class="grid grid-cols-12 mt-20">
                     @auth
-                        <a href="{{ route('post_list.index') }}" class="col-start-2 lg:col-start-4 col-span-10 lg:col-span-6 text-6xl text-center bg-gray-300 h-60 py-20 rounded-lg">ホーム</a>
+                        <a href="{{ route('post_list.index') }}" class="col-start-2 col-span-10 text-6xl text-center bg-gray-300 h-60 py-20 rounded-lg">ホーム</a>
                     @else
-                        <a href="{{ route('login') }}" class="col-start-2 lg:col-start-4 col-span-10 lg:col-span-6 text-6xl text-center bg-gray-300 h-60 py-20 rounded-lg">ログイン</a>
+                        <a href="{{ route('login') }}" class="col-start-2 col-span-10 text-6xl text-center bg-gray-300 h-60 py-20 rounded-lg">ログイン</a>
                     @endauth
                 </div>
             @endif
