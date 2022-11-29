@@ -22,12 +22,20 @@ class APIController extends Controller
             $post->customer_code = $request->customer_code;
             $post->info_1_label = $request->info_1_label;
             $post->info_1_text = $request->info_1_text;
+            $post->info_2_label = $request->info_2_label;
+            $post->info_2_text = $request->info_2_text;
+            $post->info_3_label = $request->info_3_label;
+            $post->info_3_text = $request->info_3_text;
             $post->save();
         }
         if($post_count != 0){
             Post::where('customer_code', $request->customer_code)->update([
                 'info_1_label' => $request->info_1_label,
                 'info_1_text' => $request->info_1_text,
+                'info_2_label' => $request->info_2_label,
+                'info_2_text' => $request->info_2_text,
+                'info_3_label' => $request->info_3_label,
+                'info_3_text' => $request->info_3_text,
             ]);
         }
         return response()->json([
