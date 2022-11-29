@@ -488,6 +488,8 @@ video {
   grid-column: span 2 / span 2;
 }.col-span-8 {
   grid-column: span 8 / span 8;
+}.col-span-6 {
+  grid-column: span 6 / span 6;
 }.col-span-4 {
   grid-column: span 4 / span 4;
 }.col-span-12 {
@@ -498,8 +500,6 @@ video {
   grid-column: span 7 / span 7;
 }.col-span-10 {
   grid-column: span 10 / span 10;
-}.col-span-6 {
-  grid-column: span 6 / span 6;
 }.col-start-3 {
   grid-column-start: 3;
 }.col-start-11 {
@@ -795,15 +795,12 @@ video {
 }.text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }.text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }.text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1104,6 +1101,8 @@ video {
   }
 }@media (min-width: 1280px) {.xl\:col-span-2 {
     grid-column: span 2 / span 2;
+  }.xl\:mt-0 {
+    margin-top: 0px;
   }.xl\:text-5xl {
     font-size: 3rem;
     line-height: 1;
