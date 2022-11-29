@@ -11,7 +11,7 @@
                 </form>
             </ul>
         </div>
-        <p class="col-start-3 col-span-8 text-2xl xl:text-5xl text-blue-500 text-center mt-2 xl:mt-0">進捗掲示板</p>
-        <p class="col-start-11 col-span-2 text-right text-sm xl:text-xl mr-3 mt-5 xl:mt-3">{{ Auth::user()->name }}</p>
+        <p class="col-start-3 col-span-5 text-2xl xl:text-5xl text-blue-500 mt-2 xl:mt-0">進捗掲示板</p>
+        <p class="col-start-9 col-span-4 text-right text-sm xl:text-xl mr-3 mt-4 xl:mt-3">{{ Auth::user()->name }}</p>
     </div>
 </header>
