@@ -1099,6 +1099,10 @@ video {
   }
 }@media (min-width: 1280px) {.xl\:col-span-2 {
     grid-column: span 2 / span 2;
+  }.xl\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }.xl\:col-start-11 {
+    grid-column-start: 11;
   }.xl\:mt-0 {
     margin-top: 0px;
   }.xl\:mt-3 {
