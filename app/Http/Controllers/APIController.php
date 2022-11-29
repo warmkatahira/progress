@@ -26,8 +26,8 @@ class APIController extends Controller
         }
         if($post_count != 0){
             Post::where('customer_code', $request->customer_code)->update([
-                $post->info_1_label = $request->info_1_label;
-                $post->info_1_text = $request->info_1_text;
+                'info_1_label' => $request->info_1_label,
+                'info_1_text' => $request->info_1_text,
             ]);
         }
         return response()->json([
