@@ -30,5 +30,10 @@ class CustomerSeeder extends Seeder
             'customer_name' => '2FLAG',
             'base_name' => 'ロジステーションプラス',
         ]);
+        Customer::create([
+            'customer_code' => 'from',
+            'customer_name' => 'フロムアイズ',
+            'base_name' => 'ロジコンタクト',
+        ]);
     }
 }
