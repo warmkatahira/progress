@@ -49,6 +49,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('post_list.index');
+        return redirect()->route('welcome');
     }
 }

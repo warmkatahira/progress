@@ -12,10 +12,10 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <!-- メールアドレス -->
+            <!-- ユーザー名 -->
             <div>
-                <label for="email">メールアドレス</label>
-                <input type="email" id="email" class="block mt-1 w-full rounded-lg" name="email" value="{{ old('email') }}" required autofocus />
+                <label for="user_name">ユーザー名</label>
+                <input type="text" id="user_name" class="block mt-1 w-full rounded-lg" name="user_name" value="{{ old('user_name') }}" required autofocus />
             </div>
 
             <!-- Password -->
