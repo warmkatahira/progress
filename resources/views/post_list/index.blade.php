@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="py-5 mx-5">
         <div class="grid grid-cols-12 gap-4">
-            <p class="col-start-1 col-span-6 xl:col-span-2 text-center text-2xl bg-pink-200 rounded-lg py-3">進捗一覧</p>
+            <p class="col-span-6 xl:col-span-2 text-center text-base xl:text-2xl bg-pink-200 rounded-lg py-3">進捗一覧</p>
         </div>
         <div class="grid grid-cols-12 gap-4 mt-5">
             @foreach($posts as $post)
