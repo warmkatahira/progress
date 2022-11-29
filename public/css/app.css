@@ -1096,7 +1096,11 @@ video {
   }.sm\:pt-0 {
     padding-top: 0px;
   }
-}@media (min-width: 1024px) {.lg\:px-8 {
+}@media (min-width: 1024px) {.lg\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }.lg\:col-start-4 {
+    grid-column-start: 4;
+  }.lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
