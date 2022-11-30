@@ -48,7 +48,7 @@ class CustomerListService
         if(session('search_base') != 0){
             $customers = $customers->where('base_id', session('search_base'));
         }
-        $customers = $customers->get();
+        $customers = $customers->orderBy('base_id', 'asc')->get();
         return $customers;
     }
 }
