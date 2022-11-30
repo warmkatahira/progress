@@ -29,10 +29,12 @@ Route::controller(WelcomeController::class)->group(function(){
     
 }); */
 
-Route::controller(PostListController::class)->prefix('post_list')->name('post_list.')->group(function(){
-    Route::get('/', 'index')->name('index');
+// ログインしているか、ユーザーステータスが有効であるかチェック
+Route::middleware(['auth'])->group(function () {
+    Route::controller(PostListController::class)->prefix('post_list')->name('post_list.')->group(function(){
+        Route::get('/', 'index')->name('index');
+    });
 });
-
 
 
 
