@@ -23,7 +23,7 @@
 
     </head>
     <body style="font-family:Kosugi Maru" class="bg-gray-100">
-        <div class="min-h-screen px-5">
+        <div class="min-h-screen px-5 mt-3">
             <div class="grid grid-cols-12">
                 <p class="col-span-12 text-4xl text-green-600">ミエル</p>
             </div>
