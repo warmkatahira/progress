@@ -4,9 +4,9 @@ namespace App\Services;
 
 use Carbon\Carbon;
 use App\Models\Base;
-use App\Models\Post;
+use App\Models\Customer;
 
-class PostListService
+class CustomerListService
 {
     // basesテーブルの情報+パラメータによって「全社」も取得する
     public function getBases()
@@ -38,16 +38,15 @@ class PostListService
         return;
     }
 
-    public function searchPosts()
+    public function searchCustomers()
     {
-        // 使用するテーブルを結合
-        $posts = Post::join('customers', 'customers.customer_code', 'posts.customer_code')
-                    ->select('posts.*', 'customers.base_id');
+        // インスタンス化
+        $customers = new Customer;
         // 全社（=0）以外であれば条件を適用
         if(session('search_base') != 0){
-            $posts = $posts->where('base_id', session('search_base'));
+            $customers = $customers->where('base_id', session('search_base'));
         }
-        $posts = $posts->orderBy('posts.updated_at', 'desc')->get();
-        return $posts;
+        $customers = $customers->get();
+        return $customers;
     }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PostListController;
+use App\Http\Controllers\CustomerListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +26,15 @@ Route::controller(WelcomeController::class)->group(function(){
     Route::get('/', 'index')->name('welcome');
 });
 
-/* Route::controller(HomeController::class)->prefix('home')->name('home.')->group(function(){
-    
-}); */
-
-// ログインしているか、ユーザーステータスが有効であるかチェック
+// ログインしているかチェック
 Route::middleware(['auth'])->group(function () {
+    // 進捗一覧
     Route::controller(PostListController::class)->prefix('post_list')->name('post_list.')->group(function(){
+        Route::get('/', 'index')->name('index');
+        Route::get('search', 'search')->name('search');
+    });
+    // 荷主一覧
+    Route::controller(CustomerListController::class)->prefix('customer_list')->name('customer_list.')->group(function(){
         Route::get('/', 'index')->name('index');
         Route::get('search', 'search')->name('search');
     });
