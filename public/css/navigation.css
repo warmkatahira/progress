@@ -1,6 +1,6 @@
 /* Navbar & Navmenu color */
 :root {
-    --background-navbar: rgba(200, 231, 255, 0.98);
+    --background-navbar: rgba(204, 250, 212, 0.98);
   }
   
   .nav-header {
@@ -42,7 +42,7 @@
     letter-spacing: 2px;
     font-size: 16px;
     text-transform: capitalize;
-    color: rgb(59 130 246);
+    color: rgb(22 163 74);
     opacity: 0;
     transition: 0.5s;
   }
@@ -74,7 +74,7 @@
   }
   
   .navicon {
-    background: rgb(59 130 246);
+    background: rgb(22 163 74);
     display: block;
     height: 3px;
     width: 26px;
@@ -89,7 +89,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background: rgb(59 130 246);
+    background: rgb(22 163 74);
     transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   }
   
