@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\PostListService;
+use App\Services\CommonService;
 
 class PostListController extends Controller
 {
@@ -11,8 +12,9 @@ class PostListController extends Controller
     {
         // サービスクラスを定義
         $PostListService = new PostListService;
+        $CommonService = new CommonService;
         // 拠点情報を取得
-        $base_info = $PostListService->getBases();
+        $base_info = $CommonService->getBases(true);
         // 初期条件をセット
         $PostListService->setDefaultParameter();
         // 検索処理
@@ -27,8 +29,9 @@ class PostListController extends Controller
     {
         // サービスクラスを定義
         $PostListService = new PostListService;
+        $CommonService = new CommonService;
         // 拠点情報を取得
-        $base_info = $PostListService->getBases();
+        $base_info = $CommonService->getBases(true);
         // 抽出条件をセット
         $PostListService->setSearchParameter($request);
         // 検索処理

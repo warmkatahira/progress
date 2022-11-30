@@ -6,6 +6,7 @@ use App\Http\Controllers\APIController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PostListController;
 use App\Http\Controllers\CustomerListController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,13 @@ Route::middleware(['auth'])->group(function () {
     Route::controller(CustomerListController::class)->prefix('customer_list')->name('customer_list.')->group(function(){
         Route::get('/', 'index')->name('index');
         Route::get('search', 'search')->name('search');
+    });
+    // 荷主
+    Route::controller(CustomerController::class)->prefix('customer')->name('customer.')->group(function(){
+        Route::get('register', 'register_index')->name('register_index');
+        Route::post('register', 'register')->name('register');
+        Route::get('modify', 'modify_index')->name('modify_index');
+        Route::post('modify', 'modify')->name('modify');
     });
 });
 

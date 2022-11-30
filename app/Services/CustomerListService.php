@@ -40,6 +40,8 @@ class CustomerListService
 
     public function searchCustomers()
     {
+        // 現在のURLを取得
+        session(['back_url_1' => url()->full()]);
         // インスタンス化
         $customers = new Customer;
         // 全社（=0）以外であれば条件を適用
