@@ -5,9 +5,9 @@
         </div>
         <!-- 抽出条件 -->
         <div class="grid grid-cols-12 gap-4 mt-5">
-            <p class="col-span-12 border-l-4 border-green-600 pl-2">抽出条件</p>
+            <p class="col-span-12 border-l-4 border-green-600 pl-2 text-base xl:text-xl">抽出条件</p>
             <form method="GET" action="{{ route('post_list.search') }}" class="m-0 col-span-12 grid grid-cols-12 gap-4">
-                <select name="search_base" class="col-span-8 xl:col-span-3 rounded-lg">
+                <select name="search_base" class="col-span-9 xl:col-span-3 rounded-lg">
                     @foreach($base_info as $base_id => $base_name)
                         <option value="{{ $base_id }}" {{ $base_id == session('search_base') ? 'selected' : '' }}>{{ $base_name }}</option>
                     @endforeach
