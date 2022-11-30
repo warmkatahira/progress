@@ -12,7 +12,7 @@
                         <option value="{{ $base_id }}" {{ $base_id == session('search_base') ? 'selected' : '' }}>{{ $base_name }}</option>
                     @endforeach
                 </select>
-                <button type="submit" class="col-start-11 xl:col-start-4 col-span-4 xl:col-span-1 rounded-lg text-center bg-green-200">抽出</button>
+                <button type="submit" class="col-start-11 xl:col-start-4 col-span-4 xl:col-span-1 rounded-lg text-center bg-green-200"><i class="las la-search la-lg"></i></button>
             </form>
         </div>
         <!-- 進捗一覧 -->
