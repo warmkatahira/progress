@@ -4,14 +4,39 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Services\PostListService;
 
 class PostListController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('updated_at', 'desc')->get();
+        // サービスクラスを定義
+        $PostListService = new PostListService;
+        // 拠点情報を取得
+        $base_info = $PostListService->getBases();
+        // 初期条件をセット
+        $PostListService->setDefaultParameter();
+        // 検索処理
+        $posts = $PostListService->searchPosts();
         return view('post_list.index')->with([
             'posts' => $posts,
+            'base_info' => $base_info,
+        ]);
+    }
+
+    public function search(Request $request)
+    {
+        // サービスクラスを定義
+        $PostListService = new PostListService;
+        // 拠点情報を取得
+        $base_info = $PostListService->getBases();
+        // 抽出条件をセット
+        $PostListService->setSearchParameter($request);
+        // 検索処理
+        $posts = $PostListService->searchPosts();
+        return view('post_list.index')->with([
+            'posts' => $posts,
+            'base_info' => $base_info,
         ]);
     }
 }

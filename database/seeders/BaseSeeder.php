@@ -16,10 +16,6 @@ class BaseSeeder extends Seeder
     public function run()
     {
         Base::create([
-            'base_id' => 0,
-            'base_name' => '本社',
-        ]);
-        Base::create([
             'base_id' => 1,
             'base_name' => '第1営業所',
         ]);
