@@ -5,7 +5,9 @@
             <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
             <ul class="menu">
                 <li><a href="{{ route('post_list.index') }}">進捗一覧</a></li>
-                <li><a href="{{ route('customer_list.index') }}">荷主一覧</a></li>
+                @if(Auth::user()->role_id == 1)
+                    <li><a href="{{ route('customer_list.index') }}">荷主一覧</a></li>
+                @endif
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">ログアウト</a></li>
