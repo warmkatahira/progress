@@ -44,12 +44,21 @@ class CustomerController extends Controller
         ]);
     }
 
-    public function modify(Request $request)
+    public function modify(CustomerRequest $request)
     {
         // サービスクラスを定義
         $CustomerService = new CustomerService;
         // 荷主情報を変更
         $CustomerService->modifyCustomer($request);
+        return redirect()->route('customer_list.index');
+    }
+
+    public function delete(Request $request)
+    {
+        // サービスクラスを定義
+        $CustomerService = new CustomerService;
+        // 荷主を削除
+        $CustomerService->deleteCustomer($request->customer_code);
         return redirect()->route('customer_list.index');
     }
 }

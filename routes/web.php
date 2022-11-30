@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('register', 'register')->name('register');
         Route::get('modify', 'modify_index')->name('modify_index');
         Route::post('modify', 'modify')->name('modify');
+        Route::get('delete', 'delete')->name('delete');
     });
 });
 

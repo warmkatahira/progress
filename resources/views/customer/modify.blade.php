@@ -4,6 +4,7 @@
         <div class="grid grid-cols-12 gap-4">
             <a href="{{ session('back_url_1') }}" class="col-span-3 xl:col-span-1 bg-black text-white rounded-lg text-center text-base xl:text-2xl py-3">戻る</a>
             <p class="col-start-4 xl:col-start-2 col-span-6 xl:col-span-2 text-center text-base xl:text-2xl bg-pink-200 rounded-lg py-3">荷主情報変更</p>
+            <a href="{{ route('customer.delete', ['customer_code' => $customer->customer_code]) }}" class="col-start-10 xl:col-start-12 col-span-3 xl:col-span-1 bg-red-600 text-white rounded-lg text-center text-base xl:text-2xl py-3">削除</a>
         </div>
         <!-- アラート -->
         <x-alert/>

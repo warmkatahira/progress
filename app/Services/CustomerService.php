@@ -35,4 +35,11 @@ class CustomerService
         ]);
         return;
     }
+
+    public function deleteCustomer($customer_code)
+    {
+        // 荷主を削除
+        Customer::where('customer_code', $customer_code)->delete();
+        return;
+    }
 }
