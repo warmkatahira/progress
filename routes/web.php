@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('search', 'search')->name('search');
     });
-    // 荷主
+    // 荷主操作
     Route::controller(CustomerController::class)->prefix('customer')->name('customer.')->group(function(){
         Route::get('register', 'register_index')->name('register_index');
         Route::post('register', 'register')->name('register');

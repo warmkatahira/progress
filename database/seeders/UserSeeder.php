@@ -31,5 +31,13 @@ class UserSeeder extends Seeder
             'role_id' => 100,
             'status' => 1,
         ]);
+        User::create([
+            'name' => '田村　拓海',
+            'user_name' => 'tamura',
+            'email' => 't.tamura@warm.co.jp',
+            'password' => bcrypt('tamura135'),
+            'role_id' => 1,
+            'status' => 1,
+        ]);
     }
 }

@@ -13,6 +13,10 @@ const mix = require('laravel-mix');
  
 mix.js('resources/js/app.js', 'public/js')
 .css('resources/css/navigation.css', 'public/css')
+.js('resources/js/customer.js', 'public/js')
+.autoload({
+    jquery: ['$', 'window.jQuery']
+})
 .postCss('resources/css/app.css', 'public/css', [
     require('postcss-import'),
     require('tailwindcss'),
