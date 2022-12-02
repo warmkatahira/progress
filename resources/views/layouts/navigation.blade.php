@@ -14,7 +14,7 @@
                 </form>
             </ul>
         </div>
-        <p class="col-start-3 col-span-5 xl:col-span-8 text-2xl xl:text-5xl text-left xl:text-center text-green-600 mt-2 xl:mt-0">ミエル</p>
+        <p class="col-start-3 xl:col-start-3 col-span-5 xl:col-span-8 text-2xl xl:text-5xl text-left xl:text-center text-green-600 mt-2 xl:mt-0">ミエル</p>
         <p class="col-start-9 xl:col-start-11 col-span-4 xl:col-span-2 text-right text-sm xl:text-xl mr-3 mt-4 xl:mt-3">{{ Auth::user()->name }}</p>
     </div>
 </header>
