@@ -44,7 +44,8 @@ class PostListService
     {
         // 使用するテーブルを結合
         $posts = Post::join('customers', 'customers.customer_code', 'posts.customer_code')
-                    ->select('posts.*', 'customers.base_id');
+                    ->join('bases', 'bases.base_id', 'customers.base_id')
+                    ->select('posts.*', 'customers.base_id', 'bases.base_name');
         // 全社（=0）以外であれば条件を適用
         if(session('search_base') != 0){
             $posts = $posts->where('base_id', session('search_base'));
