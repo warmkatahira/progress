@@ -26,8 +26,10 @@ class PostListService
 
     public function setDefaultParameter()
     {
-        // 初期条件をセット(全社をセット)
+        // 全社をセット
         session(['search_base' => 0]);
+        // 更新順表示をセット
+        session(['view_type' => 'update']);
         return;
     }
 
@@ -47,7 +49,27 @@ class PostListService
         if(session('search_base') != 0){
             $posts = $posts->where('base_id', session('search_base'));
         }
-        $posts = $posts->orderBy('posts.updated_at', 'desc')->get();
+        // ビューが更新順であれば条件を適用
+        if(session('view_type') == 'update'){
+            $posts = $posts->orderBy('posts.updated_at', 'desc');
+        }
+        // ビューが拠点順であれば条件を適用
+        if(session('view_type') == 'base'){
+            $posts = $posts->orderBy('customers.base_id', 'asc')
+                            ->orderBy('posts.customer_code', 'asc');
+        }
+        $posts = $posts->get();
         return $posts;
+    }
+
+    public function setViewType($request)
+    {
+        // 押されたボタンによってビューを切り替え
+        if ($request->has('view_update')) {
+            session(['view_type' => 'update']);
+        } elseif ($request->has('view_base')) {
+            session(['view_type' => 'base']);
+        }
+        return;
     }
 }

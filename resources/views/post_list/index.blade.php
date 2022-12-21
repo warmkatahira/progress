@@ -6,14 +6,21 @@
         <!-- 抽出条件 -->
         <div class="grid grid-cols-12 gap-4 mt-5">
             <p class="col-span-12 border-l-4 border-green-600 pl-2 text-base xl:text-xl">抽出条件</p>
-            <form method="GET" action="{{ route('post_list.search') }}" class="m-0 col-span-12 grid grid-cols-12 gap-4">
-                <select name="search_base" class="col-span-9 xl:col-span-3 rounded-lg">
+            <form method="GET" action="{{ route('post_list.search') }}" class="m-0 col-span-12 xl:col-span-8 grid grid-cols-12 gap-4">
+                <select name="search_base" class="col-span-9 xl:col-span-4 rounded-lg">
                     @foreach($base_info as $base_id => $base_name)
                         <option value="{{ $base_id }}" {{ $base_id == session('search_base') ? 'selected' : '' }}>{{ $base_name }}</option>
                     @endforeach
                 </select>
-                <button type="submit" class="col-start-11 xl:col-start-4 col-span-4 xl:col-span-1 rounded-lg text-center bg-green-200"><i class="las la-search la-lg"></i></button>
+                <button type="submit" class="col-start-11 xl:col-start-5 col-span-4 xl:col-span-2 rounded-lg text-center bg-green-200"><i class="las la-search la-lg"></i></button>
             </form>
+            <!-- ビュー切り替えボタン -->
+            <div class="col-span-12 xl:col-span-4 grid grid-cols-12">
+                <form method="GET" action="{{ route('post_list.view_change') }}" class="m-0 col-span-12 grid grid-cols-12">
+                    <button type="submit" name="view_update" class="col-span-6 text-sm text-center border-black border {{ session('view_type') == 'update' ? 'bg-blue-200' : 'bg-gray-200' }}">更新順</button>
+                    <button type="submit" name="view_base" class="col-span-6 text-sm text-center border-black border-y border-r {{ session('view_type') == 'base' ? 'bg-blue-200' : 'bg-gray-200' }}">拠点順</button>
+                </form>
+            </div>
         </div>
         <!-- 進捗一覧 -->
         <div class="grid grid-cols-12 gap-4 mt-5">

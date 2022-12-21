@@ -33,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::controller(PostListController::class)->prefix('post_list')->name('post_list.')->group(function(){
         Route::get('/', 'index')->name('index');
         Route::get('search', 'search')->name('search');
+        Route::get('view', 'view_change')->name('view_change');
     });
     // 荷主一覧
     Route::controller(CustomerListController::class)->prefix('customer_list')->name('customer_list.')->group(function(){

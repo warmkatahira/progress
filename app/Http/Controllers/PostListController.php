@@ -41,4 +41,21 @@ class PostListController extends Controller
             'base_info' => $base_info,
         ]);
     }
+
+    public function view_change(Request $request){
+        // サービスクラスを定義
+        $PostListService = new PostListService;
+        $CommonService = new CommonService;
+        // 拠点情報を取得
+        $base_info = $CommonService->getBases(true);
+        // ビュー情報をセット
+        $PostListService->setViewType($request);
+        // 検索処理
+        $posts = $PostListService->searchPosts();
+        return view('post_list.index')->with([
+            'posts' => $posts,
+            'base_info' => $base_info,
+        ]);
+    }
+
 }
