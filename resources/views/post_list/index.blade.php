@@ -14,7 +14,7 @@
                 </select>
                 <button type="submit" class="col-start-11 xl:col-start-5 col-span-4 xl:col-span-2 rounded-lg text-center bg-green-200"><i class="las la-search la-lg"></i></button>
             </form>
-            <!-- ビュー切り替えボタン -->
+            <!-- ビューの切り替えボタン -->
             <div class="col-span-12 xl:col-span-4 grid grid-cols-12">
                 <form method="GET" action="{{ route('post_list.view_change') }}" class="m-0 col-span-12 grid grid-cols-12">
                     <button type="submit" name="view_update" class="col-span-6 text-sm text-center border-black border {{ session('view_type') == 'update' ? 'bg-blue-200' : 'bg-gray-200' }}">更新順</button>
