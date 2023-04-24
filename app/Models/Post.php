@@ -27,4 +27,9 @@ class Post extends Model
     {
         return $this->belongsTo('App\Models\Customer', 'customer_code', 'customer_code');
     }
+
+    public static function getSpecify($customer_code)
+    {
+        return self::where('customer_code', $customer_code);
+    }
 }

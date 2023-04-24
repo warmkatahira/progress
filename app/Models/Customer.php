@@ -17,6 +17,7 @@ class Customer extends Model
         'customer_code',
         'customer_name',
         'base_id',
+        'is_detail_available',
     ];
 
     public function base()

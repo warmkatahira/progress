@@ -25,7 +25,12 @@
         <!-- 進捗一覧 -->
         <div class="grid grid-cols-12 gap-4 mt-5">
             @foreach($posts as $post)
-                <div class="col-span-12 xl:col-span-4 grid grid-cols-12">
+            @if($post->customer->is_detail_available == 0)
+                <a class="col-span-12 xl:col-span-4 grid grid-cols-12">
+            @endif
+            @if($post->customer->is_detail_available == 1)
+                <a class="col-span-12 xl:col-span-4 grid grid-cols-12" href="{{ route('post_list.detail', ['customer_code' => $post->customer_code]) }}">
+            @endif
                     <p class="col-span-12 text-right pr-5 text-sm">{{ '最終更新:'.\Carbon\Carbon::parse($post->updated_at)->isoFormat('YYYY年MM月DD日(ddd) HH時mm分ss秒') }}</p>
                     <p class="col-span-12 bg-orange-500 text-white text-center rounded-t-lg py-1">{{ $post->base_name }}</p>
                     <p class="col-span-12 bg-black text-white text-center py-3">{{ $post->customer->customer_name }}</p>
@@ -35,7 +40,7 @@
                     <p class="col-span-7 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_2_text) ? '-' : number_format($post->info_2_text) }}</p>
                     <p class="col-span-5 bg-gray-300 text-center py-3">{{ is_null($post->info_3_label) ? '-' : $post->info_3_label }}</p>
                     <p class="col-span-7 bg-gray-300 text-center py-3">{{ is_null($post->info_3_text) ? '-' : number_format($post->info_3_text) }}</p>
-                </div>
+                </a>
             @endforeach
         </div>
     </div>

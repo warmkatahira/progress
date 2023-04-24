@@ -538,6 +538,10 @@ video {
   margin-right: 0.75rem;
 }.mt-4 {
   margin-top: 1rem;
+}.ml-10 {
+  margin-left: 2.5rem;
+}.mt-10 {
+  margin-top: 2.5rem;
 }.mb-4 {
   margin-bottom: 1rem;
 }.mt-1 {
@@ -642,6 +646,8 @@ video {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }.grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}.flex-row {
+  flex-direction: row;
 }.flex-col {
   flex-direction: column;
 }.items-center {
@@ -713,6 +719,9 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }.border-transparent {
   border-color: transparent;
+}.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }.border-indigo-400 {
   --tw-border-opacity: 1;
   border-color: rgb(129 140 248 / var(--tw-border-opacity));
@@ -746,15 +755,18 @@ video {
 }.bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }.bg-blue-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }.bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}.bg-orange-600 {
+}.bg-orange-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }.bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
@@ -773,9 +785,6 @@ video {
 }.bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
-}.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }.fill-current {
   fill: currentColor;
 }.p-6 {
@@ -856,6 +865,9 @@ video {
 }.text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }.text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1164,6 +1176,8 @@ video {
     grid-column: span 4 / span 4;
   }.xl\:col-span-8 {
     grid-column: span 8 / span 8;
+  }.xl\:col-span-11 {
+    grid-column: span 11 / span 11;
   }.xl\:col-start-12 {
     grid-column-start: 12;
   }.xl\:col-start-4 {

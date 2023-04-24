@@ -21,6 +21,11 @@
                 </select>
                 <label for="customer_name" class="col-start-1 xl:col-start-1 col-span-4 xl:col-span-1 bg-black text-white text-center py-2">荷主名</label>
                 <input type="text" id="customer_name" name="customer_name" class="col-span-8 xl:col-span-2" required autocomplete="off">
+                <label for="is_detail_available" class="col-start-1 xl:col-start-1 col-span-4 xl:col-span-1 bg-black text-white text-center py-2">詳細表示</label>
+                <select name="is_detail_available" class="col-span-8 xl:col-span-2">
+                    <option value="0">無効</option>
+                    <option value="1">有効</option>
+                </select>
                 <button type="submit" class="col-start-1 xl:col-start-1 col-span-12 xl:col-span-3 text-center bg-black text-white rounded-lg py-3">登録実行</button>
             </div>
         </form>

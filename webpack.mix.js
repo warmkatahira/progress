@@ -13,7 +13,9 @@ const mix = require('laravel-mix');
  
 mix.js('resources/js/app.js', 'public/js')
 .css('resources/css/navigation.css', 'public/css')
+.css('resources/css/post_detail.css', 'public/css')
 .js('resources/js/customer.js', 'public/js')
+.js('resources/js/post_detail.js', 'public/js')
 .autoload({
     jquery: ['$', 'window.jQuery']
 })

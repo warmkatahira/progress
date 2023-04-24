@@ -31,13 +31,15 @@ Route::controller(WelcomeController::class)->group(function(){
 Route::middleware(['auth'])->group(function () {
     // 進捗一覧
     Route::controller(PostListController::class)->prefix('post_list')->name('post_list.')->group(function(){
-        Route::get('/', 'index')->name('index');
+        Route::get('', 'index')->name('index');
         Route::get('search', 'search')->name('search');
         Route::get('view', 'view_change')->name('view_change');
+        Route::get('detail', 'detail')->name('detail');
+        Route::post('progress_chart_ajax', 'progress_chart_ajax');
     });
     // 荷主一覧
     Route::controller(CustomerListController::class)->prefix('customer_list')->name('customer_list.')->group(function(){
-        Route::get('/', 'index')->name('index');
+        Route::get('', 'index')->name('index');
         Route::get('search', 'search')->name('search');
     });
     // 荷主操作

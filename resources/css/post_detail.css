@@ -1,0 +1,14 @@
+.progress_chart {
+    width: 400px;
+}
+
+.small_disp {
+    width: 350px;
+    font-family: 'Ubuntu';
+}
+
+.large_disp {
+    width: 712px;
+    font-size: 60px;
+    font-family: 'Ubuntu';
+}

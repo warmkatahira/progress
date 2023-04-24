@@ -11007,18 +11007,70 @@ return jQuery;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!**********************************!*\
-  !*** ./resources/js/customer.js ***!
-  \**********************************/
+/*!*************************************!*\
+  !*** ./resources/js/post_detail.js ***!
+  \*************************************/
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-// 荷主削除ボタンが押下されたら
-$("[id=customer_delete]").on("click", function () {
-  var result = window.confirm("荷主を削除しますか？");
-  // 「はい」が押下されたらsubmit、「いいえ」が押下されたら処理キャンセル
-  if (result == false) {
-    return false;
-  }
+var orange = 'rgba(246, 173, 85, 1)';
+var gray = 'rgb(196, 196, 196)';
+
+// 30秒毎に自動更新
+$(document).ready(function () {
+  setInterval(function () {
+    location.reload();
+  }, 30000);
 });
+window.onload = function () {
+  progress_chart();
+};
+function progress_chart() {
+  Progress_Chart = null;
+  // 環境でパスを可変させる
+  if (true) {
+    var ajax_url = '/post_list/progress_chart_ajax';
+  }
+  if (false) { var ajax_url; }
+  $.ajax({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    url: ajax_url,
+    type: 'POST',
+    data: {
+      "customer_code": $('#customer_code').val()
+    },
+    dataType: 'json',
+    success: function success(data) {
+      // チャートを表示
+      var Context = document.querySelector("#progress_chart").getContext('2d');
+      // 前回のチャートを破棄
+      if (Progress_Chart != null) {
+        Progress_Chart.destroy();
+      }
+      Progress_Chart = new Chart(Context, {
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            // 
+            data: [data['progress_1'], data['progress_2']],
+            backgroundColor: [orange, gray],
+            label: ['進捗率']
+          }]
+        },
+        options: {
+          responsive: false,
+          title: {},
+          animation: false
+        }
+      });
+      // 進捗率に出力
+      $('#progress').html(data['progress_1'] + ' %');
+    },
+    error: function error() {
+      alert('失敗');
+    }
+  });
+}
 })();
 
 /******/ })()

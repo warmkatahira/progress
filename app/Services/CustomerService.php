@@ -15,6 +15,7 @@ class CustomerService
             'customer_code' => $request->customer_code,
             'customer_name' => $request->customer_name,
             'base_id' => $request->base,
+            'is_detail_available' => $request->is_detail_available,
         ]);
         return;
     }
@@ -32,6 +33,7 @@ class CustomerService
         Customer::where('customer_code', $request->customer_code)->update([
             'base_id' => $request->base,
             'customer_name' => $request->customer_name,
+            'is_detail_available' => $request->is_detail_available,
         ]);
         return;
     }
