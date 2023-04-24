@@ -19,7 +19,7 @@ function progress_chart(){
         var ajax_url = '/post_list/progress_chart_ajax';
     }
     if(process.env.MIX_APP_ENV === 'pro'){
-        var ajax_url = '/touch/post_list/progress_chart_ajax';
+        var ajax_url = '/progress/post_list/progress_chart_ajax';
     }
     $.ajax({
         headers: {

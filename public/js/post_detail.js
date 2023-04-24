@@ -11028,7 +11028,7 @@ function progress_chart() {
   // 環境でパスを可変させる
   if (false) { var ajax_url; }
   if (true) {
-    var ajax_url = '/touch/post_list/progress_chart_ajax';
+    var ajax_url = '/progress/post_list/progress_chart_ajax';
   }
   $.ajax({
     headers: {
