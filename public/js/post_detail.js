@@ -11026,10 +11026,10 @@ window.onload = function () {
 function progress_chart() {
   Progress_Chart = null;
   // 環境でパスを可変させる
-  if (true) {
-    var ajax_url = '/post_list/progress_chart_ajax';
-  }
   if (false) { var ajax_url; }
+  if (true) {
+    var ajax_url = '/touch/post_list/progress_chart_ajax';
+  }
   $.ajax({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
