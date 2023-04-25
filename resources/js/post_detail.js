@@ -5,7 +5,7 @@ const gray = 'rgb(196, 196, 196)';
 $(document).ready(function() {
     setInterval(function() {
         location.reload();
-    }, 10000);
+    }, 30000);
 });
 
 window.onload = function () {
