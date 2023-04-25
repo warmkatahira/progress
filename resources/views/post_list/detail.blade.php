@@ -10,18 +10,18 @@
         </div>
         <div class="flex flex-col xl:flex-row justify-center mt-2">
             <canvas id="progress_chart" class="progress_chart"></canvas>
-            <div class="flex flex-col ml-10 mt-5">
-                <div class="flex flex-col">
+            <div class="flex flex-col ml-10 mt-5 w-full">
+                <div class="flex flex-col w-full">
                     <p class="text-3xl text-center large_disp bg-gray-600 py-2 text-white">進捗率</p>
                     <p id="progress" class="text-center large_disp border border-gray-600 py-2"></p>
                 </div>
                 <div class="flex flex-row mt-2">
-                    <div class="flex flex-col">
+                    <div class="flex flex-col w-1/2">
                         <p class="text-3xl text-center small_disp bg-gray-600 py-2 text-white">{{ $post->info_1_label }}</p>
                         <p class="text-3xl text-center small_disp border border-gray-600 py-2">{{ number_format($post->info_1_text) }}</p>
                     </div>
                     @if(!is_null($post->info_2_label))
-                        <div class="flex flex-col ml-3">
+                        <div class="flex flex-col w-1/2 ml-3">
                             <p class="text-3xl text-center small_disp bg-gray-600 py-2 text-white">{{ $post->info_2_label }}</p>
                             <p class="text-3xl text-center small_disp border border-gray-600 py-2">{{ number_format($post->info_2_text) }}</p>
                         </div>
@@ -29,13 +29,13 @@
                 </div>
                 <div class="flex flex-row mt-2">
                     @if(!is_null($post->info_3_label))
-                        <div class="flex flex-col">
+                        <div class="flex flex-col w-1/2">
                             <p class="text-3xl text-center small_disp bg-gray-600 py-2 text-white">{{ $post->info_3_label }}</p>
                             <p class="text-3xl text-center small_disp border border-gray-600 py-2">{{ number_format($post->info_3_text) }}</p>
                         </div>
                     @endif
                     @if(!is_null($post->info_4_label))
-                        <div class="flex flex-col ml-3">
+                        <div class="flex flex-col w-1/2 ml-3">
                             <p class="text-3xl text-center small_disp bg-gray-600 py-2 text-white">{{ $post->info_4_label }}</p>
                             <p class="text-3xl text-center small_disp border border-gray-600 py-2">{{ number_format($post->info_4_text) }}</p>
                         </div>
