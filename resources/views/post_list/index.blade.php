@@ -38,8 +38,10 @@
                     <p class="col-span-7 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_1_text) ? '-' : number_format($post->info_1_text) }}</p>
                     <p class="col-span-5 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_2_label) ? '-' : $post->info_2_label }}</p>
                     <p class="col-span-7 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_2_text) ? '-' : number_format($post->info_2_text) }}</p>
-                    <p class="col-span-5 bg-gray-300 text-center py-3">{{ is_null($post->info_3_label) ? '-' : $post->info_3_label }}</p>
-                    <p class="col-span-7 bg-gray-300 text-center py-3">{{ is_null($post->info_3_text) ? '-' : number_format($post->info_3_text) }}</p>
+                    <p class="col-span-5 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_3_label) ? '-' : $post->info_3_label }}</p>
+                    <p class="col-span-7 bg-gray-300 text-center py-3 border-b-2 border-black border-dashed">{{ is_null($post->info_3_text) ? '-' : number_format($post->info_3_text) }}</p>
+                    <p class="col-span-5 bg-gray-300 text-center py-3">{{ is_null($post->info_4_label) ? '-' : $post->info_4_label }}</p>
+                    <p class="col-span-7 bg-gray-300 text-center py-3">{{ is_null($post->info_4_text) ? '-' : number_format($post->info_4_text) }}</p>
                 </a>
             @endforeach
         </div>
