@@ -11058,7 +11058,7 @@ function progress_chart() {
           }]
         },
         options: {
-          responsive: false,
+          responsive: true,
           title: {},
           animation: false
         }
