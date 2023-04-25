@@ -18,11 +18,11 @@
                 <div class="flex flex-row mt-10">
                     <div class="flex flex-col">
                         <p class="text-3xl text-center small_disp bg-gray-600 py-2 text-white">{{ $post->info_1_label }}</p>
-                        <p class="text-3xl text-center small_disp border border-gray-600 py-5">{{ $post->info_1_text }}</p>
+                        <p class="text-3xl text-center small_disp border border-gray-600 py-5">{{ number_format($post->info_1_text) }}</p>
                     </div>
                     <div class="flex flex-col ml-3">
                         <p class="text-3xl text-center small_disp bg-gray-600 py-2 text-white">{{ $post->info_2_label }}</p>
-                        <p class="text-3xl text-center small_disp border border-gray-600 py-5">{{ $post->info_2_text }}</p>
+                        <p class="text-3xl text-center small_disp border border-gray-600 py-5">{{ number_format($post->info_2_text) }}</p>
                     </div>
                 </div>
             </div>

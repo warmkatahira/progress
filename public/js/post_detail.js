@@ -11018,13 +11018,13 @@ var gray = 'rgb(196, 196, 196)';
 $(document).ready(function () {
   setInterval(function () {
     location.reload();
-  }, 30000);
+  }, 10000);
 });
 window.onload = function () {
   progress_chart();
 };
 function progress_chart() {
-  Progress_Chart = null;
+  var Progress_Chart = null;
   // 環境でパスを可変させる
   if (false) { var ajax_url; }
   if (true) {

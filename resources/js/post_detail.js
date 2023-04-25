@@ -5,7 +5,7 @@ const gray = 'rgb(196, 196, 196)';
 $(document).ready(function() {
     setInterval(function() {
         location.reload();
-    }, 30000);
+    }, 10000);
 });
 
 window.onload = function () {
@@ -13,7 +13,7 @@ window.onload = function () {
 }
 
 function progress_chart(){
-    Progress_Chart = null;
+    let Progress_Chart = null;
     // 環境でパスを可変させる
     if(process.env.MIX_APP_ENV === 'local'){
         var ajax_url = '/post_list/progress_chart_ajax';
@@ -53,7 +53,7 @@ function progress_chart(){
                     title: {
                     },
                     animation: false,
-                }
+                },
             })
             // 進捗率に出力
             $('#progress').html(data['progress_1'] + ' %');
