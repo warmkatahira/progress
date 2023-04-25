@@ -8,12 +8,8 @@
             <a href="{{ route('post_list.index') }}" class="col-span-3 xl:col-span-1 bg-black text-white rounded-lg text-center text-base xl:text-2xl py-3">戻る</a>
             <p class="col-start-4 xl:col-start-2 col-span-9 xl:col-span-11 text-center text-base xl:text-2xl bg-pink-200 rounded-lg py-3">{{ $post->customer->customer_name }}</p>
         </div>
-        <div class="flex justify-center mt-2">
-            @if(\Illuminate\Support\Facades\Request::header('User-Agent') && \Illuminate\Support\Facades\Request::header('User-Agent') == 'Mobile')
-
-            @else
-                <canvas id="progress_chart" class="progress_chart"></canvas>
-            @endif
+        <div class="flex flex-col xl:flex-row justify-center mt-2">
+            <canvas id="progress_chart" class="progress_chart"></canvas>
             <div class="flex flex-col ml-10 mt-5">
                 <div class="flex flex-col">
                     <p class="text-3xl text-center large_disp bg-gray-600 py-2 text-white">進捗率</p>

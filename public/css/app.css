@@ -1198,6 +1198,8 @@ video {
     height: 10rem;
   }.xl\:w-40 {
     width: 10rem;
+  }.xl\:flex-row {
+    flex-direction: row;
   }.xl\:text-center {
     text-align: center;
   }.xl\:text-2xl {
