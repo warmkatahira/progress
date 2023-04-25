@@ -21,6 +21,10 @@ class Post extends Model
         'info_2_text',
         'info_3_label',
         'info_3_text',
+        'info_4_label',
+        'info_4_text',
+        'info_5_label',
+        'info_5_text',
     ];
 
     public function customer()

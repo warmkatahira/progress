@@ -26,6 +26,10 @@ class APIController extends Controller
             $post->info_2_text = $request->info_2_text;
             $post->info_3_label = $request->info_3_label;
             $post->info_3_text = $request->info_3_text;
+            $post->info_4_label = $request->info_4_label;
+            $post->info_4_text = $request->info_4_text;
+            $post->info_5_label = $request->info_5_label;
+            $post->info_5_text = $request->info_5_text;
             $post->save();
         }
         if($post_count != 0){
@@ -36,6 +40,10 @@ class APIController extends Controller
                 'info_2_text' => $request->info_2_text,
                 'info_3_label' => $request->info_3_label,
                 'info_3_text' => $request->info_3_text,
+                'info_4_label' => $request->info_4_label,
+                'info_4_text' => $request->info_4_text,
+                'info_5_label' => $request->info_5_label,
+                'info_5_text' => $request->info_5_text,
             ]);
         }
         return response()->json([
