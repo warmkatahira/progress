@@ -48,7 +48,7 @@ class PostListService
                     ->select('posts.*', 'customers.base_id', 'bases.base_name');
         // 全社（=0）以外であれば条件を適用
         if(session('search_base') != 0){
-            $posts = $posts->where('base_id', session('search_base'));
+            $posts = $posts->where('customers.base_id', session('search_base'));
         }
         // ビューが更新順であれば条件を適用
         if(session('view_type') == 'update'){
