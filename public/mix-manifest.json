@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/customer.js": "/js/customer.js",
     "/js/post_detail.js": "/js/post_detail.js",
+    "/js/post_index.js": "/js/post_index.js",
     "/css/app.css": "/css/app.css",
     "/css/post_detail.css": "/css/post_detail.css",
     "/css/navigation.css": "/css/navigation.css"

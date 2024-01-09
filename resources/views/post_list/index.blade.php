@@ -1,3 +1,5 @@
+<script src="{{ asset('js/post_index.js') }}" defer></script>
+
 <x-app-layout>
     <div class="py-5 mx-5">
         <div class="grid grid-cols-12 gap-4">
