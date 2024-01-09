@@ -31,7 +31,7 @@
                 <a class="col-span-12 xl:col-span-4 grid grid-cols-12">
             @endif
             @if($post->customer->is_detail_available == 1)
-                <a class="col-span-12 xl:col-span-4 grid grid-cols-12" href="{{ route('post_list.detail', ['customer_code' => $post->customer_code]) }}">
+                <a class="col-span-12 xl:col-span-4 grid grid-cols-12" @if($post->info_1_text != 0) href="{{ route('post_list.detail', ['customer_code' => $post->customer_code]) }} @endif">
             @endif
                     <p class="col-span-12 text-right pr-5 text-sm">{{ '最終更新:'.\Carbon\Carbon::parse($post->updated_at)->isoFormat('YYYY年MM月DD日(ddd) HH時mm分ss秒') }}</p>
                     <p class="col-span-12 bg-orange-500 text-white text-center rounded-t-lg py-1">{{ $post->base_name }}</p>
